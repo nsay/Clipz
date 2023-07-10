@@ -1,6 +1,15 @@
 # Clipz
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
+This project is a collection of gaming streaming clips.
+
+Tech Stack:
+1. Angular CLI version 15.1.6
+2. Tailwind CSS
+3. LESS Preprocessor 
+
+## Notes
+
+The video on the landing page will not autoplay if you are using Google Chrome as your web browser. Chrome will disable autoplay videos if there are no user interaction on load. The workaround is by clicking a link such as the Logo qualifies as a user interaction. Refreshing the page does not qualify. [Read More](https://developer.chrome.com/blog/autoplay/).
 
 ## Development server
 
