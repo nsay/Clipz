@@ -1,6 +1,6 @@
 # Clipz
 
-This project is a collection of gaming streaming clips.
+[WIP] This project is a collection of gaming streaming clips.
 
 Tech Stack:
 1. Angular CLI version 15.1.6
