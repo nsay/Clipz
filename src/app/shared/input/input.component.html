@@ -6,7 +6,6 @@
       [dropSpecialCharacters]="false" />
 <!-- Form Input Error statements  -->
 <ng-container *ngIf="control.touched && control.dirty">
-  <!-- Name -->
   <p *ngIf="control.errors?.['required']" class="text-red-400">
   Field is required.
   </p>
@@ -14,18 +13,15 @@
     The name you inputted is {{ control.errors?.['minlength'].actualLength }} characters long.
     <br> It must be {{ control.errors?.['minlength'].requiredLength }} characters long.
   </p>
-  <!-- Email -->
   <p *ngIf="control.errors?.['email']" class="text-red-400">
     You must enter a valid email address.
   </p>
-  <!-- Age -->
   <p *ngIf="control.errors?.['min']" class="text-red-400">
     Value is too low.
   </p>
   <p *ngIf="control.errors?.['max']" class="text-red-400">
     Value is too high.
   </p>
-  <!-- Password -->
   <p *ngIf="control.errors?.['pattern']" class="text-red-400">
     Passwords must be at least 8 characters containing at least 1 uppercase letter, 1 lowercase letter, and 1 number. 
     <br> Special characters are allowed.
