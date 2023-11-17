@@ -4,7 +4,7 @@
       [placeholder]="placeholder" />
 <!-- Form Input Error statements  -->
 <ng-container *ngIf="control.touched && control.dirty">
-  <!-- Name input errors  -->
+  <!-- Name -->
   <p *ngIf="control.errors?.['required']" class="text-red-400">
   Field is required.
   </p>
@@ -13,8 +13,15 @@
     <br>
     It must be {{ control.errors?.['minlength'].requiredLength }} characters long.
   </p>
-  <!-- Email input errors  -->
+  <!-- Email -->
   <p *ngIf="control.errors?.['email']" class="text-red-400">
     You must enter a valid email address.
+  </p>
+  <!-- Age -->
+  <p *ngIf="control.errors?.['min']" class="text-red-400">
+    Value is too low.
+  </p>
+  <p *ngIf="control.errors?.['max']" class="text-red-400">
+    Value is too high.
   </p>
 </ng-container>
