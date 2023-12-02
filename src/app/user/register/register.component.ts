@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
+import IUser from 'src/app/models/user.model';
 
 @Component({
   selector: 'app-register',
@@ -18,7 +19,7 @@ export class RegisterComponent {
       Validators.required,
       Validators.email
     ]),
-    age: new FormControl('', [
+    age: new FormControl<number | null>(null, [
       Validators.required,
       Validators.min(18),
       Validators.max(100)
@@ -52,7 +53,7 @@ export class RegisterComponent {
 
     try {
       //pass user data to auth service to create user
-      this.auth.createUser(this.registerForm.value);
+      this.auth.createUser(this.registerForm.value as IUser);
     } catch (e){ 
       this.showAlert = true;
       this.alertMsg = 'An unexpected error occurred. Please try again later.';
